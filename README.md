@@ -28,29 +28,31 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 ## SetUp
 
 ■参照サイト「WindowsでXAMPPを使えばLaravel環境構築」
+<pre>
 https://reffect.co.jp/laravel/windows-xampp-laravel-install
+</pre>
 
 ■xammp インストール
 XAMPP for Windows 7.3.28 (PHP73)
 
 ■mysql インストール
+<pre>
 https://www.mysql.com/jp/
 https://dev.mysql.com/downloads/file/?id=505213
 
-User:root
-Pass:administorator
+User:sample_user
+Pass:sample_pass
 
-User:laravel_user
-Pass:laravel_pass
-
-GRANT ALL PRIVILEGES ON laravel_db_dev.* TO laravel_user@localhost;
+GRANT ALL PRIVILEGES ON laravel_db_dev.* TO sample_user@localhost;
 
 http://localhost/phpMyadmin/index.php
+</pre>
 
 ■composer インストール
+<pre>
 https://getcomposer.org/
 
-C:\Users\tsubasa.sample_user>composer -v
+C:\Users\sample_user>composer -v
    ______
   / ____/___  ____ ___  ____  ____  ________  _____
  / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
@@ -61,14 +63,16 @@ Composer version 2.1.1 2021-06-04 08:46:46
 
 □PATHチェック
 
-C:\Users\tsubasa.sample_user>where composer
+C:\Users\sample_user>where composer
 C:\ProgramData\ComposerSetup\bin\composer
 C:\ProgramData\ComposerSetup\bin\composer.bat
 
-C:\Users\tsubasa.sample_user>where php
+C:\Users\sample_user>where php
 C:\xampp\php\php.exe
+</pre>
 
 ■Laravel インストール
+<pre>
 C:\xampp\htdocs>composer create-project --prefer-dist laravel/laravel laravel "6.*"
 
 ***
@@ -78,16 +82,18 @@ Package manifest generated successfully.
 Use the `composer fund` command to find out more!
 > @php artisan key:generate --ansi
 Application key set successfully.
+</pre>
 
 ■VSCODE 拡張パッケージ
+<pre>
 vscode-icon
 php intelephense
 php debug
 japanese pk
-
+</pre>
 
 ■環境修正
-
+<pre>
 □メールのSMTPをLOGへ変更
 \htdocs\laravel\.env
 -----------------------
@@ -103,14 +109,14 @@ DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=laravel_db_dev
-DB_USERNAME=laravel_user
-DB_PASSWORD=laravel_pass
+DB_USERNAME=sample_user
+DB_PASSWORD=sample_pass
 -----------------------
+</pre>
 
 ■Laravel 
 
 http://127.0.0.1:8000/
-
 
 ## Contributing
 

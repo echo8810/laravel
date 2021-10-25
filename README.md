@@ -115,10 +115,13 @@ http://127.0.0.1:8000/
 ## Contributing
 
 ■アプリラン
+<pre>
 C:\xampp\htdocs\laravel>php artisan serve
 Laravel development server started: http://127.0.0.1:8000
+</pre>
 
 ■モデル
+<pre>
 □run
 C:\xampp\htdocs\laravel>php artisan serve
 
@@ -134,8 +137,10 @@ Migrated:  2019_08_19_000000_create_failed_jobs_table (0.12 seconds)
 
 □作成
 php artisan make:model User
+</pre>
 
 ■ルーティング
+<pre>
 routes\web.php
 -----
 Route::get('/', function () {
@@ -147,9 +152,10 @@ Route::get('/user', 'UserController@index');
 
 □参照先
 resources\views\welcome.blade.php
-
+</pre>
 
 ■コントローラー
+<pre>
 php artisan make:controller UserController
 ↓作成
 app\Http\Controllers\UserController.php
@@ -177,33 +183,33 @@ class UserController extends Controller
 ―――――――
 
 →return view ***** ：テンプレートの呼出しと変数のアサイン
-
+</pre>
 
 ■View
-
+<pre>
 src/resources/views/
 ├── base.blade.php
 └── users
     └── index.blade.php 
-
+</pre>
 
 ■カラム追加　マイグレーション
+<pre>
 C:\xampp\htdocs\laravel>php artisan make:migration add_public_flg_to_users_table --table=posts
 Created Migration: 2021_06_20_082047_add_public_flg_to_users_table
 
 C:\xampp\htdocs\laravel>php artisan migrate
 Migrating: 2021_06_20_082047_add_public_flg_to_users_table
 Migrated:  2021_06_20_082047_add_public_flg_to_users_table (1.01 seconds)
+</pre>
 
 
-
-■簡単らくらく　ログイン機能実装コマンド
+■ログイン機能実装コマンド
+<pre>
 C:\xampp\htdocs\laravel> composer require laravel/ui "^1.0" --dev
 C:\xampp\htdocs\laravel> php artisan ui vue --auth
 
 ※6系だとphp artisan make:auth が使えないため↑のようなコマンドで代用
-※参考
-https://qiita.com/KZ-taran/items/db040264109275657440
 
 サンプルデータをSeederを使用して登録
 
@@ -227,3 +233,4 @@ C:\xampp\htdocs\laravel> ##php artisan migrate:refresh --seed
 /email/verify			GET		VerificationController@show						Eメール認証画面
 /email/verify/{id}		GET		VerificationController@verify					Eメール認証
 /email/resend			GET		VerificationController@resend					Eメール認証メール再送信
+</pre>

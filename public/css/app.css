@@ -1,0 +1,9 @@
+#app nav .navbar {
+    background-color: #444444;
+}
+
+/* ドロップダウンアイテムの文字色 */
+.dropdown-item:hover {
+    background-color:#B0C4DE;
+    color:#FFF;
+}
